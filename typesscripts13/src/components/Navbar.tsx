@@ -27,7 +27,7 @@ const Navbar = () => {
             <Text fontSize={["xl", "2xl", "2xl", "2xl"]} mr={2}>
               🦉
             </Text>
-            Library App
+            Comartek App
           </Button>
         </Link>
       </Box>
@@ -55,6 +55,42 @@ const Navbar = () => {
             color="white"
           >
             Add Book
+          </Button>
+        </Link>
+        <Link to="/list-product">
+          <Button
+            fontWeight={["medium", "medium", "medium"]}
+            fontSize={["xs", "sm", "lg", "xl"]}
+            variant="ghost"
+            _hover={{ bg: "rgba(0,0,0,.2)" }}
+            p={[1, 4]}
+            color="white"
+          >
+            List Product
+          </Button>
+        </Link>
+        <Link to="/product-list">
+          <Button
+            fontWeight={["medium", "medium", "medium"]}
+            fontSize={["xs", "sm", "lg", "xl"]}
+            variant="ghost"
+            _hover={{ bg: "rgba(0,0,0,.2)" }}
+            p={[1, 4]}
+            color="white"
+          >
+            Product List
+          </Button>
+        </Link>
+        <Link to="/add-new-product">
+          <Button
+            fontWeight={["medium", "medium", "medium"]}
+            fontSize={["xs", "sm", "lg", "xl"]}
+            variant="ghost"
+            _hover={{ bg: "rgba(0,0,0,.2)" }}
+            p={[1, 4]}
+            color="white"
+          >
+            Add Product
           </Button>
         </Link>
       </Box>

@@ -36,7 +36,7 @@ const AddBook = () => {
  };
 
  return (
-   <Flex height="100vh" justifyContent="center" alignItems="center" flexDirection="column">
+   <Flex justifyContent="center" alignItems="center" flexDirection="column">
      <Box width="50%">
        <Box d="flex" flexDirection="row" justifyContent="space-between" marginBottom="20px">
          <Heading color="white">Add Book</Heading>

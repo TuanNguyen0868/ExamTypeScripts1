@@ -15,10 +15,9 @@ const BookInfo = ({
   author: string | undefined,
   id: string,
 }) => {
-  const dispatch = useAppDispatch(); // To able to call reducer, functions we use our hook called useAppDispatch
+  const dispatch = useAppDispatch(); 
   const history = useHistory();
 
-  //Redirecting user to /update-book route with id parameter.
   const redirect = (id: string) => {
     history.push(`/update-book/${id}`);
   };
