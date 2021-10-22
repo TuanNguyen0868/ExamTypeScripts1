@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body onload="onloadFuntion()">
+    <div class="main">
+        <section class="ssacc">
+            <div class="account" id="accs">
+
+            </div>
+        </section>
+        <section class="ssnav">
+            <div id="nav">
+                <ul id="nav-conten">
+
+                </ul>
+            </div>
+        </section>
+        <section class="ssconten">
+            <div class="content-table">
+                <table>
+                    <thead>
+                        <tr class="conten-tr">
+                            <th class="item-pro1">Product</th>
+                            <th class="item-pro1">Depcription</th>
+                            <th class="item-pro1">Price</th>
+                            <th class="item-pro1"></th>
+                            <th class="item-pro1">Amount Of</th>
+                            <th class="item-pro1">Total</th>
+                            <th class="item-pro1"></th>
+                            <th class="item-pro1"></th>
+                            <th class="item-pro1"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="productss" id="product-container" hidepro="hidehide"></tbody>
+                </table>
+                <div id="btn-btn">
+                    <div class="btn">
+                        <button class="btnshow" onclick="showmore()" type="button">Show More</button>
+                    </div>
+                    <div>
+                        <button class="btnshow" adsadas="sadad">Hide Pro</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <script>
+        let product = [{
+                id: "p1",
+                image: './aseet/7664a3145d87a5d9fc96.jpg',
+                depcription: "This is ngon Girl",
+                price: 5000000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+            },
+            {
+                id: "p2",
+                image: './aseet/b024f0311e55e70bbe44.jpg',
+                depcription: "This is ngon Girl",
+                price: 6000000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p3",
+                image: './aseet/bafd3353d19c29c2708d.jpg',
+                depcription: "This is ngon Girl",
+                price: 3000000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p4",
+                image: './aseet/cad12.jpg',
+                depcription: "This is ngon Girl",
+                price: 4000000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p5",
+                image: './aseet/f2bf69022137dc698526.jpg',
+                depcription: "This is ngon Girl",
+                price: 3500000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p6",
+                image: './aseet/f2bf69022137dc698526.jpg',
+                depcription: "This is ngon Girl",
+                price: 3500000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p7",
+                image: './aseet/f2bf69022137dc698526.jpg',
+                depcription: "This is ngon Girl",
+                price: 3500000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p8",
+                image: './aseet/f2bf69022137dc698526.jpg',
+                depcription: "This is ngon Girl",
+                price: 3500000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p9",
+                image: './aseet/f2bf69022137dc698526.jpg',
+                depcription: "This is ngon Girl",
+                price: 3500000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+            {
+                id: "p10",
+                image: './aseet/f2bf69022137dc698526.jpg',
+                depcription: "This is ngon Girl",
+                price: 3500000,
+                amountOf: 0,
+                total: 0,
+                currencyUnit: "VND",
+
+            },
+        ];
+        // onmouseover="mOver(this)" onmouseout="mOut(this)"
+
+        // onmouseover="mOver(this)" onmouseout="mOut(this)"
+
+        function mycount(obj) {
+            // get  element 
+            var container = obj.parentElement.parentElement;
+            var imgId = container.getAttribute('data-accid');
+            // find by id 
+            var objss = product.find(x => x.id === imgId)
+            var count = +objss.amountOf;
+            // update count 
+            count = (+count) + 10;
+            objss.amountOf = count;
+
+
+
+            var totals = (+count) * (+objss.price);
+            objss.total = totals;
+
+            // update input 
+            container.getElementsByClassName("cnt")[0].value = count;
+
+            // update html 
+            var totalEle = container.querySelector(".ttl");
+            totalEle.innerHTML = totals;
+
+
+        }
+
+        function mycount3(obj) {
+            // get  element 
+            var container = obj.parentElement.parentElement;
+            var imgId = container.getAttribute('data-accid');
+            // find by id 
+            var objss = product.find(x => x.id === imgId)
+            // get count 
+
+            var count = objss.amountOf;
+            // update count 
+            var countss = container.getElementsByClassName("cnt")[0].value;
+            objss.amountOf = countss;
+            var totals = (+countss) * (+objss.price);
+            objss.total = totals;
+            // update html 
+            var totalEle = container.querySelector(".ttl");
+            totalEle.innerHTML = totals;
+
+
+        }
+
+        function mycount2(obj) {
+            // get  element 
+            var container = obj.parentElement.parentElement;
+            var imgId = container.getAttribute('data-accid');
+            // find by id 
+            var objss = product.find(x => x.id === imgId)
+            alert("Bạn đã mua" + objss.image + "___" + "Số Lượng Là : " + objss.amountOf + "___" + "Tổng Tiền là: " +
+                objss.total)
+
+        }
+    </script>
+    <script>
+        function onloadFuntion() {
+            let showPro = "";
+            for (let i = 0; i < product.length / 2; i++) {
+                showPro +=
+                    '<tr id="atr-product" data-accid="' + product[i].id + '">' +
+                    '<td class="item-pro"><img ondblclick="dblclick(this)"  class="image-pro" src="' + product[i]
+                    .image +
+                    '" alt=""></td>' +
+                    '<td>' + product[i].depcription + '</td>' +
+                    '<td class="prices">' + product[i].price + '</td>' +
+                    '<td>' + product[i].currencyUnit + '</td>' +
+                    '<td><input type="number" class="cnt" id="inp" min="0" onchange="mycount3(this)" value=' + product[
+                        i]
+                    .amountOf + '></td>' +
+                    '<td class="ttl"  >' + product[i].total + '</td>' +
+                    '<td>' + product[i].currencyUnit + '</td>' +
+                    '<td><button type="button" id="btn-buy" class="btn-buy" onclick="mycount(this)">+10</button></td>' +
+                    '<td><button type="button" id="btn-buy2" class="btn-rebuy" onclick="mycount2(this)">Buy</button></td>' +
+                    '</tr>'
+                document.getElementById("product-container").innerHTML = showPro;
+            }
+        }
+    </script>
+    <script>
+        function mOver(obj) {
+            var container = obj.parentElement;
+            var imgId = container.getAttribute('data-accid');
+            // find by id 
+            var objss = product.find(x => x.id === imgId)
+            alert("Hello Boss ! This is picture :" + objss.image + "with amount Of :" + objss.amountOf +
+                "with depcription :" + objss.depcription + "with totalPrice:" + objss.total);
+        }
+
+        function mOut(obj) {
+
+        }
+    </script>
+
+    <script>
+        function dblclick(obj) {
+            var container = obj.parentElement.parentElement;
+            var imgID = container.getAttribute('data-accid');
+            var objss = product.find(x => x.id === imgID);
+            var newcount = objss.amountOf;
+            objss.amountOf = 0;
+            newcount = objss.amountOf;
+            var newtotal = objss.total;
+            objss.total = 0;
+            newtotal = objss.total;
+            container.getElementsByClassName("cnt")[0].value = newtotal;
+            var totalEle = container.querySelector(".ttl");
+            totalEle.innerHTML = newtotal;
+        }
+    </script>
+
+    <script>
+        let listnav = [{
+                itemnav: "Home",
+                linknav: "index.html",
+            },
+            {
+                itemnav: "Product",
+                linknav: "index.html",
+            },
+            {
+                itemnav: "About",
+                linknav: "index.html",
+            },
+            {
+                itemnav: "Blog",
+                linknav: "index.html",
+            },
+        ]
+        let shownav = '';
+        for (let r = 0; r < listnav.length; r++) {
+            shownav += '<li>' + listnav[r].itemnav + '</li>'
+            document.getElementById("nav-conten").innerHTML = shownav;
+        }
+    </script>
+    <script>
+        let listAcc = [{
+            accId: "a1",
+            accName: "Tuan",
+            accimage: "./aseet/cad12.jpg",
+        }]
+        let showacc = "";
+        for (let acc = 0; acc < listAcc.length; acc++) {
+            showacc += '<span class="sayhi">Xin Chào : </span><label class="nameacc" for="text">' + listAcc[acc]
+                .accName +
+                '</label><img class="imgacc" src="' + listAcc[acc].accimage + '" alt="">'
+            document.getElementById("accs").innerHTML = showacc;
+        }
+    </script>
+    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p ondragstart="dragStart(event)" draggable="true" id="dragtarget">acb</p>
+    </div>
+
+    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+    <p id="demo"></p>
+
+    <script>
+        function dragStart(event) {
+            event.dataTransfer.setData("image", event.target.id);
+
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("image");
+            event.target.appendChild(document.getElementById(data));
+
+        }
+    </script>
+
+    <script>
+        function showmore() {
+            let showPro2 = "";
+            var hidden = false;
+            for (let i = product.length / 2; i < product.length; i++) {
+                showPro2 +=
+                    '<tr id="atr-product" data-accid="' + product[i].id + '">' +
+                    '<td class="item-pro"><img ondblclick="dblclick(this)"  class="image-pro" src="' + product[i]
+                    .image + '" alt=""></td>' +
+                    '<td>' + product[i].depcription + '</td>' +
+                    '<td class="prices">' + product[i].price + '</td>' +
+                    '<td>' + product[i].currencyUnit + '</td>' +
+                    '<td><input type="number" class="cnt" id="inp" min="0" onchange="mycount3(this)" value=' + product[
+                        i].amountOf + '></td>' +
+                    '<td class="ttl"  >' + product[i].total + '</td>' +
+                    '<td>' + product[i].currencyUnit + '</td>' +
+                    '<td><button type="button" id="btn-buy" class="btn-buy" onclick="mycount(this)">+10</button></td>' +
+                    '<td><button type="button" id="btn-buy2" class="btn-rebuy" onclick="mycount2(this)">Buy</button></td>' +
+                    '</tr>'
+            }
+            document.getElementById("product-container").innerHTML = document.getElementById("product-container")
+                .innerHTML + showPro2;
+            // var hidden = false;
+
+            // hidden = !hidden;
+            // if (hidden) {
+            //     document.getElementById('btnshow').style.visibility = 'hidden';
+            // } else {
+            //     document.getElementById('btnshow').style.visibility = 'visible';
+            // }
+            
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+                $("button").click(function(){
+                    $(this).hide(6000);
+                });
+            });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button[adsadas='sadad']").click(function(){
+                $("tbody[hidepro='hidehide']").hide(6000);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

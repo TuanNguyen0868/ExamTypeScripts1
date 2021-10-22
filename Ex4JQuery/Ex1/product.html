@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+</head>
+
+<body onload="loadpro(), prodetail()">
+    <div class="noti">
+        <button type="button" class="btn btn-primary">
+            Messages <span class="badge badge-light">4</span>
+        </button>
+        <button type="button" class="btn btn-danger">
+            Notifications <span class="badge badge-light">7</span>
+        </button>
+    </div>
+    <p style="text-align: center; font-size: 40px; font-family: cursive;">This is Product page</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <section id="ssnav">
+                    <div class="nav">
+                        <ul class="conten-nav list-group">
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-10">
+                <section id="sspro">
+                    <div id="containerss">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr id="procontent">
+                                    <th>Book Name</th>
+                                    <th> Book Image</th>
+                                    <th> Book Title</th>
+                                    <th>Book Price</th>
+                                    <th>Book Count</th>
+                                    <th>Total Price</th>
+                                </tr>
+                            </thead>
+                            <tbody class="proct">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Show More</button>
+        <div class="collapse" id="demo">
+            This is sub-element !!!!
+            This is sub-element !!!!
+            This is sub-element !!!!
+            This is sub-element !!!!
+            This is sub-element !!!!
+            This is sub-element !!!!
+            This is sub-element !!!!
+            This is sub-element !!!!
+        </div>
+        <a href="#demo2" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
+        <div id="demo2" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="spin">
+            <div class="spinner-border text-muted"></div>
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-danger"></div>
+            <div class="spinner-border text-secondary"></div>
+            <div class="spinner-border text-dark"></div>
+            <div class="spinner-border text-light"></div>
+        </div>
+    </div>
+
+
+
+    <!-- <button id="btn-get-data">Get Data</button>
+    <div id="getdata">
+    
+    </div>
+    <p id="tg1">This is tag !</p>
+    <p id="tg2">This is tag !</p>
+    <button id="btn">
+        Click to
+    </button>
+    <p id="tg3">this is tag 3</p>
+    <p id="tg4" abc="dadasdaasdaad">this is tag 4</p>
+    <button id="tbn2">
+        Click data
+    </button>
+    <button id="tbn3">
+        click to
+    </button>
+
+    <section>
+        <div id="nav">
+
+        </div>
+    </section>
+    <section id="ctr-btn">
+        <button id="btnAdd">AddPro Auto</button>
+        <button onclick="addPro()">AddPro Auto2</button>
+        <button id="btn-re">Remove-Emp</button>
+        <button id="btn-re-all">Remove-All</button>
+        <button id="btn-ajax" onclick="loadAjax()">Show Ajax</button>
+    </section>
+    <div id="ssajax">
+
+    </div>
+    <section id="sspro">
+        <div id="Pro">
+            <ol class="olpro">
+
+            </ol>
+        </div>
+    </section> -->
+    <section id="sspro2">
+        <div id="pro2">
+
+        </div>
+    </section>
+
+    <script>
+        function loadAjax() {
+            var mhttp = new XMLHttpRequest;
+            mhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ssajax").innerHTML = this.responseText;
+                };
+            };
+            mhttp.open("GET", "ajax-test.txt", "true");
+            mhttp.send();
+        };
+    </script>
+
+    <!-- remove empty -->
+    <script>
+        $(document).ready(function () {
+            $("#btn-re").click(function () {
+                $("#Pro").empty();
+            });
+        });
+    </script>
+    <!-- Remove all -->
+    <script>
+        $(document).ready(function () {
+            $("#btn-re-all").click(function () {
+                $("#pro2").remove();
+            });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btnAdd").click(function () {
+                $(".olpro").append(
+                    "<li><img src='asset/1.jpg' alt=''><br><span>This Is Pro1</span></li>");
+            });
+        });
+    </script>
+    <script>
+        function addPro() {
+            var namepro = "<li><p>Áo Con Gấu</p></li>"; //Creat with HTML
+            var imagepro = document.createElement("b"); //Creat with DOM
+            imagepro.innerHTML = "<li><img src='asset/14.jpg' alt=''></li>";
+            var titlepro = $("<li><p></p></li>").text('Áo siêu bền và siêu đẹp'); //Creat with JQuery
+
+
+            for (let i = 1; i < 5; i++) {
+                let item = {}; //products[i];
+                let li = $("<li>");
+                let p = $("<p>");
+                p.text("index " + i);
+                p.attr("id", i)
+                li.append(p);
+                p.appendTo($("#pro2"));
+                p.click(function () {
+                    item.adasda = "aaaaa";
+                    item.count = item.count || 0;
+                    p.text("clicked: " + ++item.count);
+                    //alert(`my index is ${i}`);
+                });
+
+            }
+
+            // $("#pro2").append(namepro, imagepro, titlepro);
+        }
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#tg2").text("Hello ANh Tuan");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#tbn2").click(function () {
+                $("#tg3").text(function (i, OldData) {
+                    return "Old Data : " + OldData + " New data : This new data !" +
+                        "Index : " + i;
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#tbn3").click(function () {
+                $("#tg4").attr("abc", "nguyen anh tuan");
+            });
+        });
+    </script>
+    <!-- 
+for (let i = 1; i < 5; i++) {
+    let item = {}; //products[i];
+    let li = $("<li>");
+    let p = $("<p>");
+    p.text("index " + i);
+    p.attr("id", i)
+    li.append(p);
+    p.appendTo($("#pro2"));
+    p.click(function () {
+        item.adasda = "aaaaa";
+        item.count = item.count || 0;
+        p.text("clicked: " + ++item.count);
+        //alert(`my index is ${i}`);
+    });
+} -->
+
+
+    <script>
+        function loadpro() {
+            $.getJSON("bookss.json", function (bk) {
+                var listbooks = bk;
+                for (let i = 0; i < listbooks.length; i++) {
+                    let books = listbooks[i];
+                    let tr = $("<tr>");
+                    let td1 = $("<td>");
+                    let td2 = $("<td>");
+                    let td3 = $("<td>");
+                    let td4 = $("<td>");
+                    let td5 = $("<td>");
+                    let td6 = $("<td>");
+                    let img = $("<img>");
+                    let span = $("<span>");
+                    // let btndt = $("<button>");
+
+                    tr.attr("idbk", books.bookId);
+                    td1.text(books.bookName);
+                    img.attr("src", books.bookImg)
+                    img.attr("class", "pro-image")
+                    td3.text(books.bookTitle);
+                    td4.text(books.bookPrice);
+                    td5.text(books.bookcount);
+                    td5.attr("id", "idcount");
+                    td6.text(books.totalPrice);
+                    // btndt.attr("id", "btn-detail");
+                    // btndt.text("Detail");
+                    img.appendTo(td2);
+                    // btndt.appendTo(td2);
+                    span.text(books.currencyunit);
+                    span.appendTo(td4);
+                    tr.append(td1, td2, td3, td4, td5, td6);
+                    tr.appendTo($(".proct"));
+                    img.click(function () {
+                        books.bookcount = books.bookcount || 0;
+                        td5.text(++books.bookcount);
+                        books.totalPrice = books.bookPrice * books.bookcount;
+                        td6.text(books.totalPrice);
+                        // td5.css({
+                        //     "font-size": "200%"
+                        // })
+
+                    })
+                    td5.dblclick(function () {
+                        books.totalPrice = 0;
+                        books.bookcount = 0;
+                        td5.text(books.bookcount);
+                        td6.text(books.totalPrice);
+                    });
+                    img.mousedown(function () {
+                        td5.css({
+                            "font-size": "300%"
+                        });
+                    });
+                    img.mouseup(function () {
+                        td5.css({
+                            "font-size": "100%"
+                        });
+                    });
+                    td1.mouseover(function () {
+                        alert("Book Name : " + books.bookName + "......" + " Book Title : " + books
+                            .bookTitle + "......" + " Book SRC : " + books.bookImg + "......" +
+                            " Book Price : " + books.bookPrice + "......" + " Book Count : " + books
+                            .bookcount + "......" + " Total Price : " + books.totalPrice);
+                    });
+                    // $("#btn-detail").click(function(){
+                    //     tr.dialog({
+                    //         autoOpen: false,
+                    //         show:{
+                    //             effect:"blind",
+                    //             duration:1000
+                    //         },
+                    //         hide:{
+                    //             effect:"explode",
+                    //             duration:1000
+                    //         }
+                    //     });
+                    //     tr.dialog("open");
+                    // });
+                    // $("#btn-detail").on("click", function () {
+                    //     $(".proct").dialog({
+                    //         autoOpen: false,
+                    //         show: {
+                    //             effect: "blind",
+                    //             duration: 1000
+                    //         },
+                    //         hide: {
+                    //             effect: "explode",
+                    //             duration: 1000
+                    //         }
+                    //     });
+                    //     $(".proct").dialog("open");
+                    // });
+
+
+                }
+
+
+            });
+
+
+            $.getJSON("nav.json", function (nv) {
+                var datas = nv;
+                for (let a = 0; a < datas.length; a++) {
+                    $(".conten-nav").append('<li><a style="text-decoration: none;" href="' + datas[a].navlink +
+                        '">' + datas[a].navname + '</a></li>');
+                }
+            });
+        }
+
+        // function prodetail() {
+        //     $.getJSON("bookss.json", function (pro) {
+        //         let dtbook = pro;
+        //         for (let dt = 0; dt < dtbook.length; dt++) {
+        //             $("#btn-detail").on("click", function () {
+        //                 $(".dtpro").dialog({
+        //                     autoOpen: false,
+        //                     show: {
+        //                         effect: "blind",
+        //                         duration: 1000
+        //                     },
+        //                     hide: {
+        //                         effect: "explode",
+        //                         duration: 1000
+        //                     }
+        //                 });
+        //                 $(".dtpro").dialog("open");
+
+        //             });
+        //         }
+        //     })
+        // }       
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#bkdetailss").click(function () {
+                $.getJSON("bookss.json", function (bks) {
+                    var datassss = bks;
+                    for (let ca = 0; ca < datassss.length; ca++) {
+                        $("#bkdetail").append('Book Name :' + datassss[ca].bookName + ' ')
+
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

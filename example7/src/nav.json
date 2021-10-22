@@ -1,0 +1,22 @@
+[
+    {
+        "navId":"n1",
+        "navName":"Home",
+        "navLink":"index.html"
+    },
+    {
+        "navId":"n2",
+        "navName":"About",
+        "navLink":"about.html"
+    },
+    {
+        "navId":"n3",
+        "navName":"Product",
+        "navLink":"product.html"
+    },
+    {
+        "navId":"n4",
+        "navName":"Blog",
+        "navLink":"blog.html"
+    }
+]

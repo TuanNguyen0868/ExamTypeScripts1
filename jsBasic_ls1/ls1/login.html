@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS1</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      var d = new Date();
+      document.getElementById("ngaythang").innerHTML = d;
+    </script>
+</head>
+<body background="image/OIP.jpg" >
+  
+  <div class="header-background" data-title="Đây là header !!!">
+
+  </div>
+  <div class="nav">
+    <ul class="nav-conten">
+      <li><a href="index.html">Home </a></li>
+      <li><a href="product.html">Product </a></li>
+      <li><a href="about.html">About </a></li>
+      <li><a href="blog.html">Blog </a></li>
+      <li>
+        <a href="#">More </a>
+        <ul class="sub-nav">
+          <li><a href="detail-product.html"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="btn-login">
+      <a href="login.html">Login</a>
+    </div>
+    <div class="btn-search">
+      <input type="search" id="searchs" name="searchs" style="height: 26px;">
+       <button type="submit">Search</button>
+    </div>
+  </div>
+  <h1 class="titel-lo">Login</h1>
+  <br><br><br>
+  <div class="login-page">
+    <form action="index.html" class="form-login">
+      <label for="taikhoan">Account</label><br>
+      <input type="text" name="taikhoan" id="taikhoan" placeholder="Tài Khoản ..." required><br><br><br>
+      <label for="matkhau">Password </label><br>
+      <input type="password" name="matkhau" id="matkhau" placeholder="*********" required><br><br><br>
+      <input type="submit" value="Login">
+      <br>
+      <span>Do not have an account ?</span> <span><a href="register.html">Register</a></span>
+    </form>
+  </div>
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+  <!-- footer -->
+  <footer class="footerr">
+    <div class="image-footer">
+        <h1>This is footer</h1>
+        <p id="ngaythang"></p>
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+[
+    {
+        "id":"n1",
+        "navname":"Home",
+        "navlink":"index.html"
+    },
+    {
+        "id":"n2",
+        "navname":"Blog",
+        "navlink":"index.html"
+    },
+    {
+        "id":"n3",
+        "navname":"About",
+        "navlink":"about.html"
+    },
+    {
+        "id":"n4",
+        "navname":"Product",
+        "navlink":"product.html"
+    },
+    {
+        "id":"n5",
+        "navname":"More",
+        "navlink":"index.html"
+    },
+    {
+        "id":"n6",
+        "navname":"Anything",
+        "navlink":"index.html"
+    }
+    
+]

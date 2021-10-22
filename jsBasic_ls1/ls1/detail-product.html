@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LS1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="image/OIP.jpg">
+
+  <div class="header-background" data-title="Đây là header !!!">
+
+  </div>
+  <div class="nav">
+    <ul class="nav-conten">
+      <li><a href="index.html">Home </a></li>
+      <li><a href="product.html">Product </a></li>
+      <li><a href="about.html">About </a></li>
+      <li><a href="blog.html">Blog </a></li>
+      <li>
+        <a href="#">More </a>
+        <ul class="sub-nav">
+          <li><a href="detail-product.html"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+        </ul>
+      </li>
+    </ul>
+    <!-- <div class="cart">
+      <p>Total</p>
+    </div> -->
+    <div class="btn-login">
+      <a href="login.html">Login</a>
+    </div>
+    <div class="btn-search">
+      <input type="search" id="searchs" name="searchs" style="height: 26px;">
+      <button type="submit">Search</button>
+    </div>
+  </div>
+
+
+
+  <h1 id="title-pr">Detail Product</h1>
+  <button type="button" onclick="document.getElementById('title-pr').style.fontSize = '50px'">
+    Enlarge
+  </button>
+  <button type="button" onclick="document.getElementById('title-pr').style.fontSize = '20px'">
+    Zoom Out
+  </button>
+  <button type="button" onclick="document.write()">
+    Nhấp đê ! Trắng màn hình
+  </button>
+  <!-- footer -->
+  <div id="lista">
+
+  </div>
+
+  <footer class="footerr">
+    <div class="image-footer">
+      <h1>This is footer</h1>
+    </div>
+  </footer>
+  <script>
+    let listImage = [{
+        listImageId: "a1",
+        listImageName: "Chó Sói Nè",
+        listImageCount: "",
+        thisImage: "./image/wolves_backgrounds_003.jpg",
+      },
+      {
+        listImageId: "a2",
+        listImageName: "Bầu Trời Nè",
+        listImageCount: "",
+        thisImage: "./image/OIP.jpg",
+      },
+
+    ]
+    let showAnh = "";
+    for (let i = 0; i < listImage.length; i++) {
+      showAnh += '<div id="change-Image" data-imgId=' + listImage[i].listImageId +
+        ' ><img onclick="mycount(this)" src="' + listImage[i].thisImage +
+        '" alt="" id="myimage" class="myimagess"><p style="text-align: center; font-size: 28px; font-family: cursive;">Title :' +
+        listImage[i].listImageName + ' <p style="text-align: center; font-size: 28px; font-family: cursive;">Add To Cart :' +
+        listImage[i].listImageCount + '<span class="cnt"></span></p> </p></div>'
+      document.getElementById("lista").innerHTML = showAnh;
+    }
+
+    function mycount(obj) {
+      // get  element 
+      var container = obj.parentElement;
+      var imgId = container.getAttribute('data-imgId');
+      // find by id 
+      var objss = listImage.find(x => x.listImageId === imgId);
+      // get count 
+      var count = objss.listImageCount;
+      // update count 
+      count++;
+      objss.listImageCount = count;
+      
+      // update html 
+      var countElement = container.querySelector(".cnt");
+      countElement.innerHTML = count;
+
+
+    }
+  </script>
+  <!-- <script src="./main.js"></script> -->
+
+</body>
+
+</html>

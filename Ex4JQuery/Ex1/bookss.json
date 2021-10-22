@@ -1,0 +1,55 @@
+[{
+        "bookId": "bk1",
+        "bookName": "Flower and Tree 1",
+        "bookImg":"./asset/1.jpg",
+        "bookTitle": "This is story have happy endding !",
+        "bookPrice": 50000,
+        "bookcount": 0,
+        "totalPrice":0,
+        "currencyunit":"VND"
+    },
+    {
+        "bookId": "bk1",
+        "bookName": "Flower and Tree 2",
+        "bookImg":"./asset/2.jpg",
+        "bookTitle": "This is story have happy endding !",
+        "bookPrice": 45000,
+        "bookcount": 0,
+        "totalPrice":0,
+        "currencyunit":"VND"
+
+    },
+    {
+        "bookId": "bk1",
+        "bookName": "Flower and Tree 3",
+        "bookImg":"./asset/3.jpg",
+        "bookTitle": "This is story have happy endding !",
+        "bookPrice": 47000,
+        "bookcount": 0,
+        "totalPrice":0,
+        "currencyunit":"VND"
+
+    },
+    {
+        "bookId": "bk1",
+        "bookName": "Flower and Tree 4",
+        "bookImg":"./asset/4.jpg",
+        "bookTitle": "This is story have happy endding !",
+        "bookPrice": 60000,
+        "bookcount": 0,
+        "totalPrice":0,
+        "currencyunit":"VND"
+
+    },
+    {
+        "bookId": "bk1",
+        "bookName": "Flower and Tree  5",
+        "bookImg":"./asset/10.jpg",
+        "bookTitle": "This is story have happy endding !",
+        "bookPrice": 52000,
+        "bookcount": 0,
+        "totalPrice":0,
+        "currencyunit":"VND"
+
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "songId":"s1",
+        "songName":"Cơn Mưa Ngang Qua",
+        "singer":"Sơn Tặc MTP",
+        "author":"Sơn Tạc MTP",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s2",
+        "songName":"Quên",
+        "singer":"Noo Phước Thịnh",
+        "author":"Anh Bin",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s3",
+        "songName":"Gạt Đi Nước Mắt",
+        "singer":"Noo Phước Thịnh",
+        "author":"Anh Tuấn",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s4",
+        "songName":"Tim Không Cần",
+        "singer":"Tim",
+        "author":"Anh Hấu",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s5",
+        "songName":"Chạy Trốn",
+        "singer":"G-Ducky",
+        "author":"Anh Bin",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s6",
+        "songName":"Cơn Mưa Ngang Qua",
+        "singer":"Sơn Tặc MTP",
+        "author":"Sơn Tạc MTP",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s7",
+        "songName":"Quên",
+        "singer":"Noo Phước Thịnh",
+        "author":"Anh Bin",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s8",
+        "songName":"Gạt Đi Nước Mắt",
+        "singer":"Noo Phước Thịnh",
+        "author":"Anh Tuấn",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s9",
+        "songName":"Tim Không Cần",
+        "singer":"Tim",
+        "author":"Anh Hấu",
+        "songImage":"/logo512.png"
+    },
+    {
+        "songId":"s10",
+        "songName":"Chạy Trốn",
+        "singer":"G-Ducky",
+        "author":"Anh Bin",
+        "songImage":"/logo512.png"
+    }
+]

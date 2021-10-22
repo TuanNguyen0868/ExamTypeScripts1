@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS1</title>    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  
+  <div class="header-background" data-title="Đây là header !!!">
+
+  </div>
+  <div class="nav">
+    <ul class="nav-conten">
+      <li><a href="index.html">Home </a></li>
+      <li><a href="product.html">Product </a></li>
+      <li><a href="about.html">About </a></li>
+      <li><a href="blog.html">Blog </a></li>
+      <li>
+        <a href="#">More </a>
+        <ul class="sub-nav">
+          <li><a href="detail-product.html"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="btn-login">
+      <a href="login.html">Login</a>
+    </div>
+    <div class="btn-search">
+      <input type="search" id="searchs" name="searchs" style="height: 26px;">
+       <button type="submit">Search</button>
+    </div>
+  </div>
+  <h1>This is Blog Page</h1>
+  <button type="button" onclick="testchange(0)">Change Background</button>
+  <button type="button" onclick="testchange(1)">Change Background</button>
+  <!-- footer -->
+  <footer class="footerr">
+    <div class="image-footer">
+        <h1 id="testchange">This is footer</h1>
+        <h1 id="myInfo">Say my Name</h1>
+        <button onclick="sortmyName()">Sort</button>
+        <button onclick="reversesmyName()">Reverse</button>
+        <button onclick="sortpoint()">sortpoint</button>
+        <p id="demo11"></p>
+        <p id="demo12"></p>
+        <p id="demo13"></p>
+        <p id="demo14"></p>
+        <p id="demo15"></p>
+        <p id="demo16"></p>
+        <button type="button" onclick="displaycar()">Show Cars</button>
+        <button type="button" onclick="sortcars()">Sort Cars</button>
+        <p id="demo18"></p>
+        <p>Điểm cao nhất của tôi là : <span id="demo17"></span></p>
+        <p>Hôm nay là : <span id="demo19"></span></p>
+        
+        <!-- forin -->
+        <p id="demo20"></p>
+        <script>
+          const student = {
+             stName: "tuan",
+             stAge: 18,
+             stClass: "dev"
+          }
+          let stText = "";
+          for (let x in student) {
+            stText += student[x] + "  ";
+          }
+          document.getElementById("demo20").innerHTML = stText;
+        </script>
+
+        <!-- end forin -->
+
+        <!-- foreach -->
+        <p id="demo21"></p>
+        <p id="demo22"></p>
+        <!--end foreach -->
+
+
+        <!-- do while -->
+        <p id="demo23"></p>
+        <p id="demo24"></p>
+        <!-- end do while -->
+        <p id="demo25"></p>
+        <p id="demo26"></p>
+        <p id="demo27"></p>
+        <p id="demo28"></p>
+
+    </div>
+    <script>
+      let day;
+      switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+         break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+        break;     
+      }
+      document.getElementById("demo19").innerHTML = day;
+    </script>
+    <script>
+      const points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo15").innerHTML = points;
+      function sortpoint(){
+        points.sort(function(a, b){return(a-b)});
+        document.getElementById("demo16").innerHTML = points;	
+      }
+    </script>
+    <p id="biketest"></p>
+    <script>
+      const bike = ["ducati" , "z1000", "BMW" , "NinjaH2"];
+      let len = bike.length;
+      const text = "";
+      let i = 0;
+      for (; i < len; i++) {
+        text += bike[i] + "<br>";
+        
+      }
+      document.getElementById("biketest").innerHTML = text;
+    </script>
+
+
+    <script>
+      const pointmath = [58, 85, 65, 47, 98];
+      document.getElementById("demo17").innerHTML = findpoint(pointmath);
+      
+      function findpoint(arr){
+        return Math.max.apply(null , arr)
+      }
+    </script>
+    <button type="button" onclick="checkAge()">Check</button>
+    <script>
+      const myNamehihi = ["nguyen", "anh" , "tuan", "sieu", "cap", "vip" ,"pro"]
+      document.getElementById("demo13").innerHTML = myNamehihi;
+      function sortmyName(){
+        myNamehihi.sort();
+        document.getElementById("demo14").innerHTML = myNamehihi;
+      }
+      function reversesmyName(){
+        myNamehihi.reverse();
+        document.getElementById("demo12").innerHTML = myNamehihi
+      } 
+    </script>
+    <script>
+      const membe1 = {
+      firstName: " Nguyễn " ,
+      lastName: " Tuấn " ,
+      age: 26,
+      fullName: function() {
+        return this.firstName + "" + this.lastName;
+        }
+      };
+      document.getElementById("myInfo").innerHTML = membe1.firstName + membe1.lastName + membe1.age
+    </script>
+    <button type="button" onclick="this.innerHTML=Date()">Show Time</button>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+</html>

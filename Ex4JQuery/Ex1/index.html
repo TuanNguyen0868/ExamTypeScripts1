@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Home Page</title>
+</head>
+
+<body onload="loadpro()">
+    <div class="noti">
+        <button type="button" class="btn btn-primary">
+            Messages <span class="badge badge-light">4</span>
+        </button>
+        <button type="button" class="btn btn-danger">
+            Notifications <span class="badge badge-light">7</span>
+        </button>
+    </div>
+    <p style="text-align: center; font-size: 40px; font-family: cursive;">This is Home page</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <section id="ssnav">
+                    <div class="nav">
+                        <ul class="conten-nav list-group ">
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-10">
+                <section id="sspro">
+                    <div id="containerss">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr id="procontent">
+                                    <th>Book Name</th>
+                                    <th> Book Image</th>
+                                    <th> Book Title</th>
+                                    <th>Book Price</th>
+                                    <th>Book Count</th>
+                                    <th>Total Price</th>
+                                </tr>
+                            </thead>
+                            <tbody class="proct">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <ul class="pagination pagination-sm">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+        <div class="spin">
+            <div class="spinner-grow text-muted"></div>
+            <div class="spinner-grow text-primary"></div>
+            <div class="spinner-grow text-success"></div>
+            <div class="spinner-grow text-info"></div>
+            <div class="spinner-grow text-warning"></div>
+            <div class="spinner-grow text-danger"></div>
+            <div class="spinner-grow text-secondary"></div>
+            <div class="spinner-grow text-dark"></div>
+            <div class="spinner-grow text-light"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%"></div>
+        </div>
+    </div>
+
+
+    <!-- <button id="btn-get-data">Get Data</button>
+    <div id="getdata">
+    
+    </div>
+    <p id="tg1">This is tag !</p>
+    <p id="tg2">This is tag !</p>
+    <button id="btn">
+        Click to
+    </button>
+    <p id="tg3">this is tag 3</p>
+    <p id="tg4" abc="dadasdaasdaad">this is tag 4</p>
+    <button id="tbn2">
+        Click data
+    </button>
+    <button id="tbn3">
+        click to
+    </button>
+
+    <section>
+        <div id="nav">
+
+        </div>
+    </section>
+    <section id="ctr-btn">
+        <button id="btnAdd">AddPro Auto</button>
+        <button onclick="addPro()">AddPro Auto2</button>
+        <button id="btn-re">Remove-Emp</button>
+        <button id="btn-re-all">Remove-All</button>
+        <button id="btn-ajax" onclick="loadAjax()">Show Ajax</button>
+    </section>
+    <div id="ssajax">
+
+    </div>
+    <section id="sspro">
+        <div id="Pro">
+            <ol class="olpro">
+
+            </ol>
+        </div>
+    </section>
+    <section id="sspro2">
+        <div id="pro2">
+
+        </div>
+    </section> -->
+
+    <script>
+        function loadAjax() {
+            var mhttp = new XMLHttpRequest;
+            mhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ssajax").innerHTML = this.responseText;
+                };
+            };
+            mhttp.open("GET", "ajax-test.txt", "true");
+            mhttp.send();
+        };
+    </script>
+
+    <!-- remove empty -->
+    <script>
+        $(document).ready(function () {
+            $("#btn-re").click(function () {
+                $("#Pro").empty();
+            });
+        });
+    </script>
+    <!-- Remove all -->
+    <script>
+        $(document).ready(function () {
+            $("#btn-re-all").click(function () {
+                $("#pro2").remove();
+            });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btnAdd").click(function () {
+                $(".olpro").append(
+                    "<li><img src='asset/1.jpg' alt=''><br><span>This Is Pro1</span></li>");
+            });
+        });
+    </script>
+    <script>
+        function addPro() {
+            var namepro = "<li><p>Áo Con Gấu</p></li>"; //Creat with HTML
+            var imagepro = document.createElement("b"); //Creat with DOM
+            imagepro.innerHTML = "<li><img src='asset/14.jpg' alt=''></li>";
+            var titlepro = $("<li><p></p></li>").text('Áo siêu bền và siêu đẹp'); //Creat with JQuery
+
+            $("#pro2").append(namepro, imagepro, titlepro);
+        }
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#tg2").text("Hello ANh Tuan");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#tbn2").click(function () {
+                $("#tg3").text(function (i, OldData) {
+                    return "Old Data : " + OldData + " New data : This new data !" +
+                        "Index : " + i;
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#tbn3").click(function () {
+                $("#tg4").attr("abc", "nguyen anh tuan");
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        function loadpro() {
+            $.getJSON("bookss.json", function (bk) {
+                var listbooks = bk;
+                for (let i = 0; i < listbooks.length; i++) {
+                    let books = listbooks[i];
+                    let tr = $("<tr>");
+                    let td1 = $("<td>");
+                    let td2 = $("<td>");
+                    let td3 = $("<td>");
+                    let td4 = $("<td>");
+                    let td5 = $("<td>");
+                    let td6 = $("<td>");
+                    let img = $("<img>");
+                    let code = $("<code>");
+                    // let btn = $("<button>");
+                    let kbd = $("<kbd>");
+                    kbd.text("Hihi");
+                    td1.text(books.bookName);
+                    img.attr("src", books.bookImg)
+                    img.attr("class", "pro-image")
+                    td3.text(books.bookTitle);
+                    td4.text(books.bookPrice);
+                    td5.text(books.bookcount);
+                    td5.attr("id", "idcount");
+                    td6.text(books.totalPrice);
+                    // btn.text("Detail");
+                    // btn.attr("class", "btnDetail");
+                    code.text("VND");
+                    kbd.appendTo(td3);
+                    img.appendTo(td2);
+                    // btn.appendTo(td2);
+                    code.appendTo(td4);
+                    tr.append(td1, td2, td3, td4, td5, td6);
+                    tr.appendTo($(".proct"));
+                    img.click(function () {
+                        books.bookcount = books.bookcount || 0;
+                        td5.text(++books.bookcount);
+                        // td5.css({"font-size": "200%"});
+                        books.totalPrice = books.bookPrice * books.bookcount;
+                        td6.text(books.totalPrice);
+                    })
+                    td5.dblclick(function () {
+                        books.totalPrice = 0;
+                        books.bookcount = 0;
+                        td5.text(books.bookcount);
+                        td6.text(books.totalPrice);
+                    });
+                    img.mousedown(function () {
+                        td5.css({
+                            "font-size": "300%"
+                        });
+                    });
+                    img.mouseup(function () {
+                        td5.css({
+                            "font-size": "100%"
+                        });
+                    });
+                    td1.mouseover(function () {
+                        alert("Book Name : " + books.bookName + "......" + " Book Title : " + books
+                            .bookTitle + "......" + " Book SRC : " + books.bookImg + "......" +
+                            " Book Price : " + books.bookPrice + "......" + " Book Count : " + books
+                            .bookcount + "......" + " Total Price : " + books.totalPrice);
+                    });
+
+                }
+                // $(".btnDetail").click(function () {
+                //     alert("Book Name :");
+                // });
+            });
+            $.getJSON("nav.json", function (nv) {
+                var datas = nv;
+                for (let a = 0; a < datas.length; a++) {
+                    $(".conten-nav").append('<li><a style="text-decoration: none;" href="' + datas[a].navlink +
+                        '">' + datas[a].navname + '</a></li>');
+                }
+            });
+        }
+    </script>
+    <footer class="blockquote-footer">
+        Coppy Right by Tuấn Nguyễn
+    </footer>
+</body>
+
+
+</html>

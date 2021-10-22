@@ -1,0 +1,154 @@
+body{
+    background-color: aqua;
+    height: 2000px;
+    /* min-width: 1140px !important; */
+}
+/*
+.nav{
+    float: left;
+    margin-top: 50px;
+    width: 50px;
+    
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.content-table{
+    float: right;
+    text-align: center;
+    height: fit-content;
+    width: 700px;
+    margin-top: 70px;
+    margin-right: 400px;
+    display: inline-block;
+}
+td.item-pro{
+    margin: 25px;
+    padding: 50px;
+}
+.image-pro{
+    height: 200px;
+    width: 150px;
+}
+#atr-product{
+    display: inline-block;
+}
+#btn-buy{
+    float: right;
+}
+.item-pro1{
+    width: 33px;
+    height: 25px;
+    margin: 15px;
+} */
+.nav{
+    float: left;
+    margin-top: 50px;
+    width: 50px;
+    
+}
+.content-table{
+    float: right;
+    text-align: center;
+    height: fit-content;
+    width: 700px;
+    margin-top: 70px;
+    margin-right: 400px;
+    display: inline-block;
+}
+.image-pro{
+    height: 250px;
+    width: 150px;
+}
+
+.imgacc{
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+}
+.account{
+    display: inline;
+    height: 100px;
+    width: 200px;
+}
+.sayhi{
+    font-family: cursive;
+}
+.ssacc{
+    float: right;
+}
+.ssnav{
+    float: left;
+
+}
+ul{
+    list-style-type: none;
+    padding: 20px;
+}
+li{
+    padding: 20px;
+    font-size: 30px;
+    font-family: cursive;
+}
+.conten-tr{
+    font-size: 20px;
+    font-family: cursive;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  .btn-rebuy , .btn-buy{
+    background-color: brown;
+    color: #dddddd;
+    border-radius: 15px;
+    height: 25px;
+    width: 60px;
+    text-align: center;
+    box-shadow: 30px;
+  }
+  .ttl{
+      width: 200px;
+  }
+  .prices{
+      width: 150px;
+  }
+  table{
+      width: 1240px;
+  }
+  #inp{
+      width: 40px;
+  }
+  .droptarget {
+    float: left; 
+    width: 300px; 
+    height: 150px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+  .dropimg{
+      height: 50px;
+      width: 50px;
+  }
+  .btnshow{
+    text-align: center; 
+    border-radius: 15px;
+    background-color: rgb(160, 19, 141);
+    height: 40px;
+    width: 100px;
+    color: #aaaaaa;
+    box-shadow: 60px;
+  }
+  #btn-btn{
+      float: right;
+      margin-right: 0px;
+      padding: 15px;
+  }
+  .btn{
+      padding: 20px;
+  }

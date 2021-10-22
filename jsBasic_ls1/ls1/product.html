@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LS1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- <div class="header-background" data-title="Đây là header !!!">
+
+  </div> -->
+  <div class="nav" id="nav-content">
+  </div>
+  <div class="btn-login">
+    <a href="login.html">Login</a>
+  </div>
+  <div class="btn-search">
+    <input type="search" id="searchs" name="searchs" style="height: 26px;">
+    <button type="submit">Search</button>
+  </div>
+
+  <div class="row" id="hau">
+    <!-- <div id="ductt">ductt</div>  -->
+    <div class="colum">
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footerr">
+    <div class="image-footer">
+      <h1>This is footer</h1>
+      <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.
+      </button>
+      <p id="demo"></p>
+
+      <p id="demo1">Helo girl</p>
+      <button type="button" onclick="document.getElementById('demo1').innerHTML='Hello boy'">
+        Click Me
+      </button>
+    </div>
+  </footer>
+  <script>
+    let imgs = [{
+        id: "m1",
+        title: "Hấu Nè !!!",
+        image: "image/watermelon.jpg",
+        count:0,
+      },
+      {
+        title: "hau2",
+        image: "image/OIP.jpg"
+      },
+      {
+        title: "hau3",
+        image: "image/watermelon.jpg"
+      },
+      {
+        title: "hau4",
+        image: "image/watermelon.jpg"
+      },
+    ];
+
+    let showimage = "";
+    for (let i = 0; i < imgs.length; i++) {
+      showimage += '<div class="colum"><img class="borderimage" src="' + imgs[i].image + '">' + '<h2>' + imgs[i].title +
+        '</h2></div>';
+      document.getElementById("hau").innerHTML = showimage;
+    }
+  </script>
+  <script>
+    const navs = [{
+        nvname: "Home",
+        linkname:"index.html",
+      },
+      {
+        nvname: "Product",
+        linkname:"product.html"
+      },
+      {
+        nvname: "About",
+        linkname:"about.html",
+      },
+      {
+        nvname: "Blog",
+        linkname:"blog.html",
+      },
+      {
+        nvname: "More",
+        children: [{
+            subname: "Anything"
+          },
+          {
+            subname: "Anything1"
+          },
+          {
+            subname: "Anything2"
+          },
+        ]
+      },
+    ]
+
+    let shownav = '<ul class="nav-conten">';
+    for (let y = 0; y < (navs.length); y++) {
+      let nav = '<li><a href="'+navs[y].linkname +'">' + navs[y].nvname + '</a>';
+        // if(nav.length){
+
+        // };
+      // if (navs[y].children != null) {
+      //   nav += '<ul class="sub-nav">';
+      //   for (let z = 0; z < navs[y].children.length; z++) {
+      //     let chilnav = '<li><a href="detail-product.html"></a>' + navs[y].children[z].subname + '</li>';
+      //     nav += chilnav;
+      //   }
+      //   nav += '</ul>';
+      // }
+
+      nav += '</li>';
+      shownav += nav;
+    }
+    shownav += '</ul>';
+    document.getElementById("nav-content").innerHTML = shownav;
+  </script>
+
+  <div>
+    <p id="hvt"></p>
+  </div>
+  <script src="./js/pro.js"></script>
+</body>
+
+</html>

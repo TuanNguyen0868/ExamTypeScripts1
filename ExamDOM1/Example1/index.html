@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <style>
+        .fontsize{
+            font-family: cursive;
+            color: pink;
+        }
+        .center{
+            text-align: center;
+            font-size: 40px;
+
+        }
+    </style>
+    <div id="header">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <h3>This is header </h3>
+    </div>
+    <div class="pro">
+        <p>Produc1</p>
+    </div>
+    <div class="pro">
+        <p>Produc1</p>
+    </div>
+    <div class="pro">
+        <p>Produc1</p>
+    </div>
+
+
+
+    <a href="#" onclick="this.style.display='none'">Click Me</a><br>
+    <a href="#" onclick="console.log(this);this.classList=('fontsize')" ondblclick="this.classList=('center')">Click Me</a><br>
+    
+    <a href="#" 
+    onmouseover="changeColor(this)"
+    onmouseout="this.style.color='red'"
+    >Hey hey !!!!</a><br>
+
+    <!-- <input type="text" id="name" value="" onkeyup="changeValue(this)"><br>
+
+    <button id="btnLogin">Login</button><br><br><br><br><br><br> -->
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+    <!-- <script>
+        function changeColor(a){
+            a.style.color = "pink"
+        }
+        function changeValue(b){
+            let value = b.value;
+            b.value = value.toUpperCase()
+
+        }
+
+        let btnbtn = document.getElementById("btnLogin")
+        btnbtn.onclick = ()=>{
+            alert("Thành công rồi anh zai")
+        }
+
+    </script> -->
+    <script>
+        let listHeader = document.getElementById("header")
+        console.log(listHeader)
+        let listli = listHeader.getElementsByTagName("li")
+        console.log("SL li : "  + listli.length )
+        let Alist = listHeader.getElementsByTagName("a")
+        console.log("Sl a : " + Alist.length)
+        for (let i = 0; i < Alist.length; i++) {
+            Alist[i].href = "http://youtube.com"
+            Alist[i].setAttribute("class", "item")
+
+            console.log(Alist[i].href)
+            console.log(Alist[i].getAttribute("class"))
+
+            Alist[i].innerHTML = "<b>Link Nè</b>"
+            // Alist[i].innerText = "ABCD"
+            
+        }
+        let listFooter = document.getElementsByClassName("footer")
+        listFooter[0].innerHTML = "<b>He he Ho ho </b>"
+        
+        let prolist = document.querySelectorAll("div.pro")
+        for (let y = 0; y < prolist.length; y++) {
+            let listproname = prolist[y].getElementsByTagName("p")
+            console.log(listproname)
+            for (let z = 0; z < listproname.length; z++) {
+                listproname[z].classList = ("fontsize center ")
+                listproname[z].innerHTML = "<h2> CoppyRight by : ha ha lêu lêu</h2>"
+            }
+        }
+        // let listprostyle = document.getElementsByTagName("p")
+        // for (let a = 0; a <script listprostyle.length; a++) {
+        //     listprostyle[a].classList = ("fontsize center")
+            
+        // }
+        
+
+
+
+    </script>
+    
+    <script>
+        let ulElement = document.getElementById("header").firstElementChild
+
+        let liElement = document.createElement("li")
+        let aElement = document.createElement("a")
+
+        aElement.href = "https://www.facebook.com/profile.php?id=100008351200224"
+        aElement.innerHTML = "Product"
+        liElement.appendChild(aElement)
+        ulElement.appendChild(liElement)
+    </script>
+
+
+<form id="add-user-form">
+    <div class="item-form">
+        <label for="">UserName</label>
+        <input type="text" id=" username" value="" />
+    </div>
+    <div class="item-form">
+        <label for="">PassWord</label>
+        <input type="password" id=" password" value="" />
+    </div>
+    <div>
+        <button type="button" id="btn-btn">Add</button>
+    </div>
+</form>
+
+<script>
+    let submitBtn = document.getElementById("btn-btn")
+    let usernameElement = document.getElementById("username")
+    let passwordElement = document.getElementById("password")
+    submitBtn.onclick = function() {
+        if(usernameElement.value.length < 6){
+            usernameElement.style.backgroundColor = "red"
+        }
+    }
+    usernameElement.onkeyup = function(){
+        usernameElement.style.backgroundColor = "black"
+    }
+</script>
+</body>
+
+</html>

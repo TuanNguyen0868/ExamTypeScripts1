@@ -1,0 +1,76 @@
+body{
+    background-color: aqua !important;
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center; 
+    position: relative;
+
+}
+.noti{
+    float: right;
+}
+/* button {
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    color: antiquewhite;
+    background-color: rgb(119, 17, 17);
+} */
+table {
+    width: 1080px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+img[src$=".jpg"]{
+    width: 150px;
+    height: 200px;
+    border-radius: 18px;
+}
+ul{
+    list-style-type: none;
+    font-family: cursive;
+    font-size: 20px;
+}
+li{
+    margin: 20px;
+}
+
+#bkdetail{
+    height: 200px;
+    width: 200px;
+    background-color: floralwhite;
+}
+.spin{
+    text-align: center;
+}
+.imgcau{
+    height: 900px !important;
+}
+.navbar.navbar-expand-md{
+    background-color: azure;
+    position: fixed;
+    z-index: 1 !important;
+    margin: 0 auto;
+    width: 100%;
+    top: 0;
+}
+.modal{
+    text-align: center;
+    margin-left: 500px;
+    height: 400px;
+} 
+.modal-open .modal{
+    height: 590px;
+    width: 400px;
+}
+.card{
+    margin: 25px;
+}
+.list-group-item{
+    background-color: rgba(62, 65, 75, 0.726) !important;
+}

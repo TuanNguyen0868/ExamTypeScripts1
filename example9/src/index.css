@@ -1,0 +1,14 @@
+body {
+  font-family: cursive;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+form{
+  justify-content: center;
+}

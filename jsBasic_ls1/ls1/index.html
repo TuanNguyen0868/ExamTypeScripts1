@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="image/OIP.jpg" >
+  
+  <div class="header-background" data-title="Đây là header !!!">
+
+  </div>
+  <div class="nav">
+    <ul class="nav-conten">
+      <li><a href="index.html">Home </a></li>
+      <li><a href="product.html">Product </a></li>
+      <li><a href="about.html">About </a></li>
+      <li><a href="blog.html">Blog </a></li>
+      <li>
+        <a href="#">More </a>
+        <ul class="sub-nav">
+          <li><a href="detail-product.html"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="btn-login">
+      <a href="login.html">Login</a>
+    </div>
+    <div class="btn-search">
+      <input type="search" id="searchs" name="searchs" style="height: 26px;">
+       <button type="submit">Search</button>
+    </div>
+  </div>
+
+
+<label for="number"></label>
+<center> 
+    <div class="form-group">
+       <fieldset>
+         <legend>lgForm</legend>
+        <label for="">AcCounts</label>
+        <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder=""><br><br>
+        <label for="">PassWord</label>
+        <input type="password" class="form-control" name="" id="" placeholder="">
+        </fieldset>
+    </div>
+</center>
+<center>
+  <div class="loginform">
+    <form action="login.html">
+      <fieldset>
+        <legend>LoginForm : </legend>
+        <label for="mname">Tai Khoan</label><br>
+        <input type="text" id="mname" name="mname"  required><br>
+        <label for="passw">Mat Khau</label><br>
+        <input type="password" id="passw" name="passw"  required><br>
+        <input type="submit" value="submit">
+        </fieldset>
+    </form>
+  </div>
+</center>
+<center>
+  <section>
+    <form>
+      <fieldset>
+      <legend>RadioForm :</legend>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">FeMale</label><br> 
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br>
+    </fieldset> 
+    </form>
+  </section>
+</center>
+<center>
+  <form action="about.html">
+    <fieldset>
+    <legend>Lets choose one or litter line : </legend>
+     <input type="checkbox" id="ck1" name="cktest" value="ck1">
+    <label for="ck1">Day la dong 1</label><br>
+    <input type="checkbox" id="ck2" name="cktest" value="ck2">
+    <label for="ck1">Day la dong 2</label><br>
+    <input type="checkbox" id="ck3" name="cktest" value="ck3">
+    <label for="ck1">Day la dong 3</label><br>
+    <input type="checkbox" id="ck4" name="cktest" value="ck4">
+     <label for="ck1">Day la dong 4</label><br>
+    <input type="submit" value="submit">
+    </fieldset>
+  </form>
+</center>
+<center>
+  <form action="about.html">
+    <fieldset>
+      <legend>Select : </legend>
+    <label for="cars">Chosse a car :</label>
+     <select id="cars" name="cars">
+      <option value="Toyota">Toyota</option>
+       <option value="Honda">Honda</option>
+     <option value="Poscher">Poscher</option>
+     </select>
+    <input type="submit" >
+    </fieldset>
+   </form>
+</center>
+    <!-- date time -->
+    <center>
+      <fieldset>
+        <legend>Date</legend>
+        <label for="birthday">Birthday : </label>
+        <input type="date" id="birthday" name="birthday" max="2003-06-14">
+        <input type="submit">
+    </fieldset>
+    </center>
+    <!-- date time local-->
+    <center>
+      <fieldset>
+        <legend>Date time local</legend>
+        <label for="birthday">MyBirthday : </label>
+        <input type="datetime-local" id="birthdays" name="birthdays" max="2003-06-14">
+        <input type="submit">
+      </fieldset>
+    </center>
+    <center>
+      <form action="login.html">
+        <fieldset>
+          <legend>this is select file</legend>
+          <label for="myfile">Select a files</label>
+          <input type="file" id="myfile" name="mysile">
+          <input type="submit" value="submit">
+        </fieldset>
+      </form>
+    </center>
+    <center>
+      <form action="">
+        <fieldset>
+          <legend>this is type number </legend>
+          <label for="quantity">Quantity </label>
+          <input type="number" id="quantity" name="quantity" min="0" max="2000" step="1">
+          <input type="submit" value="submit">
+        </fieldset>
+      </form>
+    </center>
+
+    <center>
+      <form action="">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="086-979-4311" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+        <input type="submit" value="Send">
+      </form>
+    </center>
+    <script>    
+        function light(sw) {
+          var pic;
+          if (sw == 0) {
+            pic = "https://3.bp.blogspot.com/-xDT255NxS3s/WZbtCVrndcI/AAAAAAAAp5o/XFSrnT5DLf8uCdzm9NCG2ifaNULr3IRLgCLcBGAs/s640/2f83553eec1bfee5c34ba80a696e1315--sad-anime-anime-kawaii.jpg"
+          } else {
+            pic = "https://1.bp.blogspot.com/-IGqKCNLNTpA/WZbtB8_ozXI/AAAAAAAAp5k/ma6bjhGBkxMcaVkTLEBZLG1NSIUthLxsgCLcBGAs/s640/1b6e4265996da0f98cec61864121e99a.png"
+          }
+          document.getElementById('myImage').src = pic;
+        }
+    </script>
+    <p class="hlboy">Hello boy!!!</p>
+    <p class="hlboy2">Hello boy!!!!!!!!!!</p>
+    <p class="hlboy3">Hello boy!!!!!!!!!!!!!!!</p>
+    <p class="hlboy4">Hello boy!!!!!!!!!!!!!!!!!!!!!</p>
+        
+    <img id="myImage" src="https://1.bp.blogspot.com/-IGqKCNLNTpA/WZbtB8_ozXI/AAAAAAAAp5k/ma6bjhGBkxMcaVkTLEBZLG1NSIUthLxsgCLcBGAs/s640/1b6e4265996da0f98cec61864121e99a.png" width="200" height="280">
+        
+    <p>
+    <button type="button" onclick="light(1)">Changes</button>
+    <button type="button" onclick="light(0)">Change</button>
+    </p>
+    <iframe src="https://goo.gl/maps/JUGn1XD7x1rRAEsn6" width="60px" height="50px"></iframe>
+    <p><a href="#uptop"> Lên Đầu Trang</a></p>
+    <!-- footer -->
+  <footer class="footerr">
+    <div class="image-footer">
+        <h1>This is footer</h1>
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+
+</body>
+</html>

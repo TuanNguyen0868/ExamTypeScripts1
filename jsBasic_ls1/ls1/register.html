@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="image/OIP.jpg" >
+  
+  <div class="header-background" data-title="Đây là header !!!">
+
+  </div>
+  <div class="nav">
+    <ul class="nav-conten">
+      <li><a href="index.html">Home </a></li>
+      <li><a href="product.html">Product </a></li>
+      <li><a href="about.html">About </a></li>
+      <li><a href="blog.html">Blog </a></li>
+      <li>
+        <a href="#">More </a>
+        <ul class="sub-nav">
+          <li><a href="detail-product.html"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+          <li><a href="#"></a>Anything1</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="btn-login">
+      <a href="login.html">Login</a>
+    </div>
+    <div class="btn-search">
+      <input type="search" id="searchs" name="searchs" style="height: 26px;">
+       <button type="submit">Search</button>
+    </div>
+  </div>
+<h1 class="titel-re">Register</h1>
+  <!-- Start content -->
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+  <div class="form-register">
+      <form action="login.html" class="frm-register">
+          <label for="text">Your Name</label><br>
+          <input type="text" name="yourname" id="yourname" required><br><br><br>
+          <label for="email" >Your Email</label><br>
+          <input type="email" name="email" id="email" required><br><br><br>
+          <label for="acc">Account</label><br>
+          <input type="text" name="acc" id="acc" placeholder="Tài Khoản ..." required><br><br><br>
+          <label for="pass">Password </label><br>
+          <input type="password" name="pass" id="pass" placeholder="*********" required><br><br><br>
+          <br> 
+          <label for="phone">Your Phone</label><br>
+          <input type="tel" name="phone" id="phone" placeholder="086-979-4311" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br><br>
+          <label for="gender">Gender  </label><br>
+          <input type="radio" name="gender" id="male" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="fmale" value="fmale" required>
+          <label for="fmale">FeMale</label>
+          <input type="radio" name="gender" id="other" value="other" required>
+          <label for="other">Other</label><br><br><br>
+          <label for="yourbirthday">Your Birthday</label><br>
+          <input type="date" name="yourbirthday" id="yourbirthday" max="2003-06-19" required><br><br><br>
+          <label for="coutry">Address  </label><br>
+          <select name="coutry" id="coutry" class="op" required>
+              <option value="Thanh Hoá" >Thanh Hoá</option>
+              <option value="Hà Nội" >Hà Nội</option>
+              <option value="TP Hồ Chí Minh" >TP Hồ Chí Minh</option>
+              <option value="Đà Nẵng" >Đà Nẵng</option>
+              <option value="Nam Định" >Nam Định</option>
+              <option value="Lào Cai" >Lào Cai</option>
+          </select>
+          <br><br><br>
+          <label for="depcription">Depcription</label><br>
+          <textarea style="height: 200px; width: 300px; border-radius: 20px;" required>Depcription</textarea><br><br><br>
+          <br>
+          <label for="yourfile">Up Load Your File</label><br>
+          <input type="file" name="yourfile" id="yourfile" required>
+          <br><br>
+          <input type="submit" value="Register">
+          <br>
+          <br><br><br>
+          <br><br><br>
+
+      </form>
+
+  </div>
+
+  <!-- End content -->
+<!-- footer -->
+<footer class="footerr">
+  <div class="image-footer">
+      <h1>This is footer</h1>
+  </div>
+</footer>
+
+<script src="./main.js"></script>
+</body>
+</html>
