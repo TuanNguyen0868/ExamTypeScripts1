@@ -57,7 +57,7 @@ const Navbar = () => {
             Add Book
           </Button>
         </Link>
-        <Link to="/list-product">
+        {/* <Link to="/list-product">
           <Button
             fontWeight={["medium", "medium", "medium"]}
             fontSize={["xs", "sm", "lg", "xl"]}
@@ -68,7 +68,7 @@ const Navbar = () => {
           >
             List Product
           </Button>
-        </Link>
+        </Link> */}
         <Link to="/product-list">
           <Button
             fontWeight={["medium", "medium", "medium"]}

@@ -40,6 +40,7 @@ const productList: ProductState[] = [
     price: 1234567,
     quantity: 222,
   },
+  
 ];
 
 const initialState: initialStateType = {
