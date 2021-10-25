@@ -18,7 +18,7 @@ const productList: ProductState[] = [
   },
   {
     id: uuidv4(),
-    title: "Harry Potter and the Philosopher's Stone",
+    title: "Harry Potter",
     imageUrl: 'https://bit.ly/2Z4KKcF',
     name: 'Product 2',
     price: 1234567,
@@ -26,9 +26,17 @@ const productList: ProductState[] = [
   },
   {
     id: uuidv4(),
-    title: 'The Lord of the Rings',
+    title: 'The Lord',
     imageUrl: 'https://bit.ly/2Z4KKcF',
     name: 'Product 3',
+    price: 1234567,
+    quantity: 222,
+  },
+  {
+    id: uuidv4(),
+    title: 'The Queen',
+    imageUrl: 'https://bit.ly/2Z4KKcF',
+    name: 'Product 4',
     price: 1234567,
     quantity: 222,
   },
